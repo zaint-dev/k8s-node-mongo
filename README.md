@@ -5,6 +5,11 @@ vim ~/.aws/credentials
 kubectl apply -f namespace.yaml
 ```
 
+# Ver la configuracion
+```
+kubectl config view
+``` 
+
 # Configurar el contexto
 ```
 kubectl config set-context node-app-context --namespace=node-app-namespace --cluster=arn:aws:eks:us-east-1:492732896417:cluster/sharky-cluster --user=arn:aws:eks:us-east-1:492732896417:cluster/sharky-cluster
@@ -34,7 +39,7 @@ kubectl apply -f persistent-volume.yaml
 
 # Eliminar el servicio de mongo para realizar los cambios
 ```
-kubectl apply -f mongo-node.yaml
+kubectl delete -f mongo-node.yaml
 ```
 
 # Crear el nuevo deployment de mongo
