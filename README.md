@@ -44,6 +44,6 @@ kubectl delete -f mongo-node.yaml
 
 # Crear el nuevo deployment de mongo
 ```
-kubectl apply -f mongo-pv.yml
+kubectl apply -f mongo-pv.yaml
 kubectl get pods
 ```
